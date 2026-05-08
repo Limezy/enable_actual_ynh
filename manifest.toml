@@ -52,6 +52,8 @@ ram.runtime = "50M"
         url = "https://github.com/2manyvcos/enable-actual/archive/refs/tags/v2.2.0.tar.gz"
         sha256 = "82bb0ef6d927ca80ad30d75e713b5e723e65c826574bf49b951721aa05d005fa"
 
+    [resources.system_user]
+
     [resources.install_dir]
 
     [resources.permissions]
