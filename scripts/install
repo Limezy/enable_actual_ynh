@@ -43,9 +43,14 @@ pushd $install_dir
 popd
 
 #=================================================
-# FINALIZE APP INSTALL WITH CURL
+# FINALIZE APP INSTALL
 #=================================================
 ynh_script_progression "Finalizing installation..."
+
+mkdir -p "/var/log/$app"
+touch "/var/log/$app/$app.log"
+chown -R "$app:$app" "/var/log/$app"
+chmod 750 "/var/log/$app"
 
 #=================================================
 # START SYSTEMD SERVICE
