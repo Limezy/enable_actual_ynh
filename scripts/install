@@ -18,8 +18,6 @@ chown -R $app:www-data "$install_dir"
 #=================================================
 ynh_script_progression "Adding app's configuration file..."
 
-ynh_config_add --template="" --destination="$install_dir/"
-
 chmod 400 "$install_dir/"
 chown "$app:$app" "$install_dir/"
 
