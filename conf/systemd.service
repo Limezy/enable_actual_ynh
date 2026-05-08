@@ -10,6 +10,10 @@ Group=__APP__
 Environment="PATH=__PATH_WITH_NODEJS__"
 Environment="NODE_ENV=production"
 Environment="DATA_DIR=__DATA_DIR__"
+Environment="PORT=__PORT__"
+Environment="LISTEN_ADDRESS=127.0.0.1"
+Environment="SSL_ENABLED=false"
+Environment="PUBLIC_URL=https://__DOMAIN____PATH__"
 
 WorkingDirectory=__INSTALL_DIR__/
 ExecStart=__NODEJS_DIR__/node __INSTALL_DIR__
