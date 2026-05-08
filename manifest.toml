@@ -1,0 +1,60 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/main/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "enable_actual"
+name = "Enable Actual"
+
+description.en = "Import transactions from European banks into Actual Budget using Enable Banking"
+description.fr = "Import transactions from European banks into Actual Budget using Enable Banking"
+
+version = "2.2.0~ynh1"
+
+maintainers = ["Limezy"]
+
+[upstream]
+license = "MIT"
+website = "https://github.com/2manyvcos/enable-actual"
+
+admindoc = "https://github.com/2manyvcos/enable-actual"
+
+code = "https://github.com/2manyvcos/enable-actual"
+
+[integration]
+yunohost = '>= 12.1.17'
+helpers_version = "2.1"
+architectures = "all" 
+multi_instance = false
+ldap = "false" 
+sso = "false"
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/enable_actual"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "all_users"
+
+[resources]
+
+    [resources.sources]
+
+        [resources.sources.main]
+        url = "https://github.com/2manyvcos/enable-actual/archive/refs/tags/v2.2.0.tar.gz"
+        sha256 = "82bb0ef6d927ca80ad30d75e713b5e723e65c826574bf49b951721aa05d005fa"
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
+    [resources.nodejs]
+    nodejs_version=
